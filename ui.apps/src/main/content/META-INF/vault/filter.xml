@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/poc-aem-project"/>
+
+
+    <filter root="/conf/poc-aem-project" mode="merge"/>
+
+
+    <filter root="/etc/clientlibs/poc-aem-project"/>
+
+
+    <filter root="/etc/designs/poc-aem-project">
+        <include pattern="/etc/designs/poc-aem-project/jcr:content"/>
+
+    </filter>
+
+</workspaceFilter>
