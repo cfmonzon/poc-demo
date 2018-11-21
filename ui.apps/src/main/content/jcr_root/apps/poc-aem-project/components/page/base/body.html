@@ -5,28 +5,8 @@
 
 <div class="page-container">
     <div class="title"><h1>Joe, here's how you're doing...</h1></div>
-    <sly data-sly-resource="${'content' @ resourceType='wcm/foundation/components/parsys'}"/>
-    <div class="cards">
-        <div class="card blue">
-            <div class="number">7800<span>$</span></div>
-            <div class="summary">Total profit</div>
-            <div class="chart"><canvas id="widgetChart1"></canvas></div>
-        </div>
-        <div class="card yellow">
-            <div class="number">1489<span>$</span></div>
-            <div class="summary">Average Monthly</div>
-            <div class="chart"><canvas id="widgetChart2"></canvas></div>
-        </div>
-        <div class="card orange">
-            <div class="number">64</div>
-            <div class="summary">New quotes</div>
-            <div class="chart"><canvas id="widgetChart3"></canvas></div>
-        </div>
-        <div class="card green">
-            <div class="number">45</div>
-            <div class="summary">New members</div>
-            <div class="chart"><canvas id="widgetChart4"></canvas></div>
-        </div>
+    <div class="cards col-sm-12 main">
+        <sly data-sly-resource="${'content' @ resourceType='wcm/foundation/components/parsys'}"/>
     </div>
     <div class="legend"><a href="#">Customize your dashboard</a></div>
     <div class="news">
@@ -38,7 +18,7 @@
         </ul>
     </div>
 </div>
-
+<link rel="stylesheet" href="/etc/clientlibs/poc-aem-project/main/css/styles.css">
 
 <script src="/etc/clientlibs/poc-aem-project/main/js/charts.js"></script>
 <script src="/etc/clientlibs/poc-aem-project/main/js/scripts.js"></script>

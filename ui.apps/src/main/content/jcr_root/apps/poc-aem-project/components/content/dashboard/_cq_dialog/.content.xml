@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured"
+          jcr:title="Charts info" sling:resourceType="cq/gui/components/authoring/dialog"
+          helpPath="https://docs.adobe.com/docs/en/aem/6-1/author/page-authoring/editing-content.html">
+    <content jcr:primaryType="nt:unstructured"
+             sling:resourceType="granite/ui/components/foundation/container">
+        <layout jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+                type="nav" />
+        <items jcr:primaryType="nt:unstructured">
+            <headerTab jcr:primaryType="nt:unstructured" jcr:title="Chart 1"
+                       sling:resourceType="granite/ui/components/foundation/section">
+                <layout jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                        margin="{Boolean}false" />
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <chart1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                    fieldDescription="Select a source data for the chart"
+                                    fieldLabel="Chart 1 source file"
+                                    name="./chart1"
+                                    rootPath="/content"/>
+                        </items>
+                    </column>
+                </items>
+            </headerTab>
+            <accordionTab jcr:primaryType="nt:unstructured"
+                          jcr:title="Chart 2" sling:resourceType="granite/ui/components/foundation/container">
+                <layout jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <chart2
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                    fieldDescription="Select a source data for the chart"
+                                    fieldLabel="Chart 2 source file"
+                                    name="./chart2"
+                                    rootPath="/content"/>
+                        </items>
+                    </column>
+                </items>
+            </accordionTab>
+            <accordionTab1 jcr:primaryType="nt:unstructured"
+                           jcr:title="Chart 3" sling:resourceType="granite/ui/components/foundation/container">
+                <layout jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <chart3
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                    fieldDescription="Select a source data for the chart"
+                                    fieldLabel="Chart 3 source file"
+                                    name="./chart3"
+                                    rootPath="/content"/>
+                        </items>
+                    </column>
+                </items>
+            </accordionTab1>
+            <accordionTab2 jcr:primaryType="nt:unstructured"
+                           jcr:title="Chart 4" sling:resourceType="granite/ui/components/foundation/container">
+                <layout jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+                <items jcr:primaryType="nt:unstructured">
+                    <column jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <chart4
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                    fieldDescription="Select a source data for the chart"
+                                    fieldLabel="Chart 4 source file"
+                                    name="./chart4"
+                                    rootPath="/content"/>
+                        </items>
+                    </column>
+                </items>
+            </accordionTab2>
+        </items>
+    </content>
+</jcr:root>

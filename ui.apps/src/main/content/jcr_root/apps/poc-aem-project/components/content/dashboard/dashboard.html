@@ -1,0 +1,41 @@
+<div class="card blue">
+            <div class="number">0<span>$</span></div>
+            <div class="summary">No Data</div>
+            <div class="chart"><canvas id="widgetChart1"></canvas></div>
+        </div>
+        <div class="card yellow">
+            <div class="number"><span>0</span></div>
+            <div class="summary">No Data</div>
+            <div class="chart"><canvas id="widgetChart2"></canvas></div>
+        </div>
+        <div class="card orange">
+            <div class="number"><span>0</span></div>
+            <div class="summary">No Data</div>
+            <div class="chart"><canvas id="widgetChart3"></canvas></div>
+        </div>
+        <div class="card green">
+            <div class="number"><span>0</span></div>
+            <div class="summary">No Data</div>
+            <div class="chart"><canvas id="widgetChart4"></canvas></div>
+        </div>
+
+<script>
+    function loadChart(file,container){
+        var jsonFile = file;
+        $.getJSON( jsonFile , function( data ) {
+            var items = [];
+            $.each( data, function( key, val ) {
+                $("."+container+" ."+key).html(val);
+            });
+        });
+    }
+    //Chart1
+    loadChart("${properties.chart1 @ context='scriptString'}","blue");
+    //Chart2
+    loadChart("${properties.chart2 @ context='scriptString'}","yellow");
+    //Chart3
+    loadChart("${properties.chart3 @ context='scriptString'}","orange");
+    //Chart4
+    loadChart("${properties.chart4 @ context='scriptString'}","green");
+
+</script>
