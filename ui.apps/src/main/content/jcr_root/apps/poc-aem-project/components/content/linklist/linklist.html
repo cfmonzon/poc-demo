@@ -1,0 +1,11 @@
+<div class="news">
+    <ul>
+        <sly data-sly-use.listUse="${'linklist.js' @ multifieldName='items1'}">
+            <li> <a class="select" href="" >${properties.title}</a></li>
+            <span data-sly-list="${listUse}">
+                        <li><a href="${item.properties.link}">${item.properties.linkText}</a></li>
+            </span>
+        </sly>
+    </ul>
+</div>
+

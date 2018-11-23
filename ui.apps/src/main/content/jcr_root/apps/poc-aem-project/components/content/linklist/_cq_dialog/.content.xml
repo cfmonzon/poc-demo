@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured"
+          jcr:title="Linklist" sling:resourceType="cq/gui/components/authoring/dialog"
+          helpPath="https://docs.adobe.com/docs/en/aem/6-1/author/page-authoring/editing-content.html">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <Basic
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Basic"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                            margin="{Boolean}false">
+
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+
+                                    <title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                            fieldDescription="Enter the Title"
+                                            fieldLabel="Title"
+                                            name="./title"
+                                            rootPath="/content"/>
+
+                                    <multifieldcollection
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                            composite="{Boolean}true"
+                                            fieldDescription="Click + to add a new link"
+                                            fieldLabel="Add a new Text/Link"
+                                            name="./multiCol">
+                                        <field
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                name="./items1">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <linkText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldDescription="Enter Link Text"
+                                                        fieldLabel="Enter link text"
+                                                        name="./linkText"/>
+                                                <link
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                        fieldDescription="Enter Internal/External Link"
+                                                        fieldLabel="Link"
+                                                        name="./link"
+                                                        rootPath="/content"/>
+                                            </items>
+                                        </field>
+                                    </multifieldcollection>
+
+                                </items>
+                            </column>
+                        </items>
+                    </Basic>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

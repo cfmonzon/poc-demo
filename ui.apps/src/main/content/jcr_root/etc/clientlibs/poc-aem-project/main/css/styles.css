@@ -227,7 +227,7 @@ body{
 
 .news{
 	margin-top: 20px;
-	float: left;
+	display: inline-block;
 }
 .news li{
 	list-style-type: none;
